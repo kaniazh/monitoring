@@ -9,6 +9,7 @@
         reader.readAsDataURL(event.target.files[0]);
     }
 </script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -60,7 +61,9 @@
                     <p>PH</p>
                 </div>
                 <div class="icon">
-                    <i class="fa fa-building"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="65" fill="currentColor" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z" />
+                    </svg>
                 </div>
             </div>
         </div>
@@ -74,15 +77,18 @@
                     <p>Amonia</p>
                 </div>
                 <div class="icon">
-                    <i class="fa fa-key"></i>
+                    <i class='fa fa-flask' style="font-size: 70px"></i>
                 </div>
             </div>
         </div>
         <!-- ./col -->
     </div>
     <!-- /.row -->
+
+
+
     <!-- Default box -->
-    <div class="box box-primary">
+    <div class=" box box-primary">
         <div class="box-header with-border">
             <h3 class="box-title">Data Profil Sekolah</h3>
             <div class="box-tools pull-right">
