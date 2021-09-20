@@ -9,14 +9,18 @@
         reader.readAsDataURL(event.target.files[0]);
     }
 </script>
+<<<<<<< Updated upstream
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+=======
+<script src="views/demo js/chart-area-demo.js"></script>
+>>>>>>> Stashed changes
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Selamat Datang, <b><?= __session('username'); ?></b>
+        Dashboard
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?= base_url('dashboard'); ?>"><i class="fa fa-home"></i> Beranda</a></li>
+        <li><a href="<?= base_url('dashboard'); ?>"><i class="fa fa-home">Dashboard</i></a></li>
     </ol>
 </section>
 
@@ -33,7 +37,10 @@
                     <p>Keadaan Relay</p>
                 </div>
                 <div class="icon">
-                    <i class="fa fa-user"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="65" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                    <path d="M7.5 1v7h1V1h-1z"/>
+                    <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -44,10 +51,13 @@
                 <div class="inner">
                     <h3><?= count(list_siswa()); ?></h3>
 
-                    <p>Suhu</p>
+                    <p>Suhu Air</p>
                 </div>
                 <div class="icon">
-                    <i class="fa fa-users"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="70" fill="currentColor" class="bi bi-thermometer" viewBox="0 0 16 16">
+                    <path d="M8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    <path d="M8 0a2.5 2.5 0 0 0-2.5 2.5v7.55a3.5 3.5 0 1 0 5 0V2.5A2.5 2.5 0 0 0 8 0zM6.5 2.5a1.5 1.5 0 1 1 3 0v7.987l.167.15a2.5 2.5 0 1 1-3.333 0l.166-.15V2.5z"/>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -88,7 +98,125 @@
 
 
     <!-- Default box -->
+<<<<<<< Updated upstream
     <div class=" box box-primary">
+=======
+    
+    <div class="box box-primary">
+    <!-- Keadaan relay -->
+        <div class="col-xl-6 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Keadaan Relay</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Suhu air -->
+            <div class="col-xl-6 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Suhu Air</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart2"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amonia -->
+            <div class="col-xl-6 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Amonia</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart3"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PH -->
+            <div class="col-xl-6 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">PH</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart4"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+>>>>>>> Stashed changes
         <div class="box-header with-border">
             <h3 class="box-title">Data Profil Sekolah</h3>
             <div class="box-tools pull-right">
@@ -224,6 +352,6 @@
         </form>
     </div>
     <!-- /.box -->
-
+   
 </section>
 <!-- /.content -->
