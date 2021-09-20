@@ -29,7 +29,7 @@ function preview_foto(event) {
                 <div class="inner">
                     <h3><?=count(list_guru());?></h3>
 
-                    <p>Guru</p>
+                    <p>Keadaan Relay</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-user"></i>
@@ -43,7 +43,7 @@ function preview_foto(event) {
                 <div class="inner">
                     <h3><?=count(list_siswa());?></h3>
 
-                    <p>Siswa</p>
+                    <p>Suhu</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-users"></i>
