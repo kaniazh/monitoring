@@ -165,7 +165,7 @@
                         <li class="treeview <?= isset($configuration) ? 'active' : ''; ?>">
                             <a href="#">
                                 <i class="fa fa-cogs"></i>
-                                <span>Konfigurasi</span>
+                                <span>Input Sensor</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
@@ -180,7 +180,7 @@
                         <li class="treeview <?= isset($master) ? 'active' : ''; ?>">
                             <a href="#">
                                 <i class="fa fa-folder"></i>
-                                <span>Data Master</span>
+                                <span>Rekap Data</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
