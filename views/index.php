@@ -312,17 +312,10 @@
             <div class="pull-right hidden-xs">
                 Page rendered in <strong>{elapsed_time}</strong> seconds.
             </div>
-<<<<<<< Updated upstream
             <strong>Copyright &copy; <?= date('Y'); ?> <a href="https://nokenstore.com/e-raport">e-Raport</a>.</strong>
             All rights
             reserved. | Repost by <a href='https://stokcoding.com/' title='StokCoding.com' target='_blank'>StokCoding.com</a>
 
-=======
-            <span>copyright &copy;
-              <script> document.write(new Date().getFullYear());</script> - developed by Monitoring ikan
-            </span>
-            
->>>>>>> Stashed changes
         </footer>
     </div>
     <!-- ./wrapper -->
