@@ -267,6 +267,66 @@
                     </div>
                 </div>
             </section>
+            <?php
+            $db_host='localhost';
+            $db_database='e_raport';
+            $db_username='root';
+            $db_password='';
+
+            //connect database
+            $db = new mysqli($db_host, $db_username, $db_password, $db_database);
+            if ($db->connect_errno){
+                die ("could not connect to the database: <br />". $db->connect_error);
+            }
+
+            function test_input($data){
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
+            ?>
+
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body table-responsive">
+            <table class="table table-bordered table-striped table-hover datatable">
+                <thead>
+                    <tr>
+                        <th width="5">Waktu</th>
+                        <th>Tanggal</th>
+                        <th>Suhu Air</th>
+                        <th>Amonia</th>
+                        <th>PH</th>
+                        <th>Keadaan Relay</th>
+                        <th>Amonia</th>
+                        <th>ALAMAT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    /* Select queries return a resultset */
+                    $result = $mysqli->query("SELECT Nama FROM siswa LIMIT 10");
+                    printf("Select returned %d rows.\n", $result->num_rows);
+                    
+                    $n=1;
+                    foreach ($students as $row) :?>
+                    <tr>
+                        <td><?=$n++.'.';?></td>
+                        <td><?=$row->kelas_kd;?></td>
+                        <td><?=$row->nis;?></td>
+                        <td><?=$row->nisn;?></td>
+                        <td><?=$row->nama;?></td>
+                        <td><?=$row->tmp_lhr.', '.date('d M Y',strtotime($row->tgl_lhr));?></td>
+                        <td><?=$row->jk=='L'?'Laki-Laki':'Perempuan';?></td>
+                        <td><?=$row->alamat;?></td>
+                    </tr>
+                    <?php endforeach;?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
         </form>
     </div>
     <!-- /.box -->
