@@ -1,5 +1,5 @@
-<?php if(__session('access')=='super_user'):?>
-    <?php endif;?>
+<?php if (__session('access') == 'super_user') : ?>
+<?php endif; ?>
 <script>
     function preview_foto(event) {
 
@@ -36,8 +36,8 @@
                 </div>
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="65" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
-                    <path d="M7.5 1v7h1V1h-1z"/>
-                    <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+                        <path d="M7.5 1v7h1V1h-1z" />
+                        <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
                     </svg>
                 </div>
             </div>
@@ -53,8 +53,8 @@
                 </div>
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="85" height="70" fill="currentColor" class="bi bi-thermometer" viewBox="0 0 16 16">
-                    <path d="M8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-                    <path d="M8 0a2.5 2.5 0 0 0-2.5 2.5v7.55a3.5 3.5 0 1 0 5 0V2.5A2.5 2.5 0 0 0 8 0zM6.5 2.5a1.5 1.5 0 1 1 3 0v7.987l.167.15a2.5 2.5 0 1 1-3.333 0l.166-.15V2.5z"/>
+                        <path d="M8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                        <path d="M8 0a2.5 2.5 0 0 0-2.5 2.5v7.55a3.5 3.5 0 1 0 5 0V2.5A2.5 2.5 0 0 0 8 0zM6.5 2.5a1.5 1.5 0 1 1 3 0v7.987l.167.15a2.5 2.5 0 1 1-3.333 0l.166-.15V2.5z" />
                     </svg>
                 </div>
             </div>
@@ -231,45 +231,45 @@
             </div>
 
             <!-- Main content -->
-<section class="content">
-    <div class="box box-primary">
-        <div class="box-body table-responsive">
-            <table class="table table-bordered table-striped table-hover datatable">
-                <thead>
-                    <tr>
-                        <th width="5">NO</th>
-                        <th>KELAS</th>
-                        <th>NIS</th>
-                        <th>NISN</th>
-                        <th>NAMA LENGKAP</th>
-                        <th>TTL</th>
-                        <th>JK</th>
-                        <th>ALAMAT</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php 
-                    $n=1;
-                    foreach ($students as $row) :?>
-                    <tr>
-                        <td><?=$n++.'.';?></td>
-                        <td><?=$row->kelas_kd;?></td>
-                        <td><?=$row->nis;?></td>
-                        <td><?=$row->nisn;?></td>
-                        <td><?=$row->nama;?></td>
-                        <td><?=$row->tmp_lhr.', '.date('d M Y',strtotime($row->tgl_lhr));?></td>
-                        <td><?=$row->jk=='L'?'Laki-Laki':'Perempuan';?></td>
-                        <td><?=$row->alamat;?></td>
-                    </tr>
-                    <?php endforeach;?>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
+            <section class="content">
+                <div class="box box-primary">
+                    <div class="box-body table-responsive">
+                        <table class="table table-bordered table-striped table-hover datatable">
+                            <thead>
+                                <tr>
+                                    <th width="5">NO</th>
+                                    <th>KELAS</th>
+                                    <th>NIS</th>
+                                    <th>NISN</th>
+                                    <th>NAMA LENGKAP</th>
+                                    <th>TTL</th>
+                                    <th>JK</th>
+                                    <th>ALAMAT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $n = 1;
+                                foreach ($students as $row) : ?>
+                                    <tr>
+                                        <td><?= $n++ . '.'; ?></td>
+                                        <td><?= $row->kelas_kd; ?></td>
+                                        <td><?= $row->nis; ?></td>
+                                        <td><?= $row->nisn; ?></td>
+                                        <td><?= $row->nama; ?></td>
+                                        <td><?= $row->tmp_lhr . ', ' . date('d M Y', strtotime($row->tgl_lhr)); ?></td>
+                                        <td><?= $row->jk == 'L' ? 'Laki-Laki' : 'Perempuan'; ?></td>
+                                        <td><?= $row->alamat; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
         </form>
     </div>
     <!-- /.box -->
-   
+
 </section>
 <!-- /.content -->

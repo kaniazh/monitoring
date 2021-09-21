@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Aplikaso Raport Online</title>
+    <title>Aplikasi Monitoring Ikan</title>
     <link rel="icon" href="<?= base_url('uploads/') . _school_profile()->logo; ?>" type="image/x-icon" />
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -125,12 +125,12 @@
                                 <i class="fa fa-key"></i> UBAH PASSWORD
                             </a>
                         </li>
-                        <!-- User Account: style can be found in dropdown.less -->
-                        <li class="dropdown user user-menu" style="background-color:red;">
-                            <a href="<?= base_url('auth/logout'); ?>">
-                                <i class="fa fa-power-off"></i>
-                                <span class="hidden-xs">KELUAR</span>
-                            </a>
+                        <li>
+                            <div class="user-panel">
+                                <div class="pull-left image">
+                                    <img src="<?= base_url('assets/'); ?>dist/img/avatar5.png" class="img-circle">
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -164,7 +164,7 @@
                         </li>
                         <li class="treeview <?= isset($configuration) ? 'active' : ''; ?>">
                             <a href="#">
-                                <i class="fa fa-cogs"></i>
+                                <i class=""></i>
                                 <span>Input Sensor</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
@@ -236,6 +236,12 @@
                             </a>
                         </li>
                     <?php endif; ?>
+                    <li>
+                        <a href="<?= base_url('auth/logout'); ?>">
+                            <i class="fa fa-power-off"></i>
+                            <span class="hidden-xs">Keluar</span>
+                        </a>
+                    </li>
                     <?php if (__session('access') == 'siswa') : ?>
                         <li <?= isset($biodata) ? 'class="active"' : ''; ?>>
                             <a href="<?= base_url('siswa/biodata'); ?>">
@@ -312,14 +318,10 @@
             <div class="pull-right hidden-xs">
                 Page rendered in <strong>{elapsed_time}</strong> seconds.
             </div>
-            <strong>Copyright &copy; <?= date('Y'); ?> <a href="https://nokenstore.com/e-raport">e-Raport</a>.</strong>
-            All rights
-            reserved. | Repost by <a href='https://stokcoding.com/' title='StokCoding.com' target='_blank'>StokCoding.com</a>
-
+            <strong>Copyright &copy; <?= date('Y'); ?> Aplikasi Monitoring Ikan</strong>
         </footer>
     </div>
     <!-- ./wrapper -->
-
 </body>
 
 </html>
