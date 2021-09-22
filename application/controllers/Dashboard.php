@@ -21,6 +21,8 @@ class Dashboard extends CI_Controller
 		$this->load->view('index', $data);
 	}
 
+	
+
 	public function save_profil()
 	{
 		$id = $this->input->post('idprofil_sekolah', true);
@@ -70,6 +72,14 @@ class Dashboard extends CI_Controller
 		$data['content'] = 'backend/user_profile';
 		$this->load->view('index', $data);
 	}
+	public function sensor(){
+	$data = $this->db->get('data_sensor')->result_array;
+	
+	$this->load->view('dashboard', $data);
+	}
+	
 }
+
+
 
 /* End of file Dashboard.php */
